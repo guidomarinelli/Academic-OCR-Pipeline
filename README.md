@@ -1,1 +1,69 @@
-# Academic-OCR-Pipeline
+# Academic-OCR-Pipeline 🎓📈
+
+Una pipeline automatizzata per convertire PDF accademici (appunti, dispense, libri di Analisi Matematica) in file Markdown perfettamente ottimizzati per **Obsidian**. Il progetto sfrutta la potenza di **olmOCR** per il riconoscimento del testo e la conversione intelligente delle formule matematiche.
+
+> ### 📝 Note sullo sviluppo
+> Questo progetto è nato da un'esigenza pratica immediata: automatizzare la digitalizzazione di appunti di Analisi Matematica. Non è inteso come un software commerciale o una libreria ufficiale, ma come una raccolta di script "utility" per facilitare il flusso di lavoro tra OCR (olmOCR) e la creazione di appunti digitali su Obsidian o progetti LaTeX (Overleaf).
+
+### 🌟 Caratteristiche principali
+
+* **OCR di precisione**: Conversione di documenti complessi tramite `olmOCR` e `Qwen2.5-VL`.
+* **LaTeX Smart Handling**: Script dedicati per convertire i delimitatori LaTeX standard `\( \)` e `\[ \]` nei formati `$` e `$$` nativi di Obsidian.
+* **Colab Optimized**: Progettato per girare su Google Colab con gestione intelligente della cache su Drive.
+* **Flessibilità**: Doppia modalità di formattazione (completa o conservativa per LaTeX).
+
+### 📁 Struttura del Progetto
+
+* `olmocr_pipeline.py`: Il cuore della pipeline. Estrae il testo dai PDF e pulisce l'output.
+* `obsidian_formatter.py`: Converte tutta la matematica (inline e display) per Obsidian.
+* `latex_formatter.py`: Converte solo la matematica inline, mantenendo i blocchi `\[ \]`.
+* `olmocr.ipynb`: Notebook pronto all'uso per l'esecuzione su Cloud (Google Colab).
+
+---
+
+## 📸 Anteprima della Trasformazione
+
+> *Esempio di conversione: dalla scansione originale al rendering finale in Obsidian con matematica perfettamente formattata.*
+
+---
+
+## 🚀 Come iniziare
+
+1. **Installazione**:
+```bash
+pip install -r requirements.txt
+
+```
+
+
+2. **Esecuzione della Pipeline**:
+```bash
+python olmocr_pipeline.py --input_dir ./documenti --workspace ./output
+
+```
+
+
+3. **Formattazione per Obsidian**:
+```bash
+python obsidian_formatter.py ./output
+
+```
+
+
+
+---
+
+## 🤝 Ringraziamenti
+
+Questo progetto è stato reso possibile grazie all'incredibile lavoro di:
+
+* **The olmOCR Team**: per aver fornito un modello allo stato dell'arte per la comprensione di documenti accademici.
+* **Alibaba Qwen Team**: per il potentissimo modello vision-language Qwen2.5-VL.
+* **Google Colab**: per aver messo a disposizione le risorse computazionali (GPU) necessarie.
+* **The Obsidian Community**: per aver creato il miglior ecosistema per la gestione della conoscenza.
+
+---
+
+*Developed with ❤️ for students and researchers.*
+
+---
