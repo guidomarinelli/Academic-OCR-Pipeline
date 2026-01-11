@@ -18,14 +18,26 @@ from olmocr.data.renderpdf import render_pdf_to_base64png
 from olmocr.prompts import build_no_anchoring_v4_yaml_prompt
 from olmocr.image_utils import is_jpeg, is_png
 
-os.environ['HF_HOME'] = '/content/drive/MyDrive/hf_cache'
+# Initialize the logger
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("olmOCR-Pipeline")
+
+# Configuration of environment and cache variables
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 warnings.filterwarnings("ignore")
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("olmOCR-Colab")
+# Flexible model cache management
+drive_cache = '/content/drive/MyDrive/hf_cache'
+try:
+    if os.path.exists('/content/drive'):
+        os.environ['HF_HOME'] = drive_cache
+        logger.info(f"✅ Google Drive rilevato. Cache impostata su: {drive_cache}")
+    else:
+        logger.info("ℹ️ Google Drive non rilevato (Kaggle/Locale). Utilizzo cache predefinita.")
+except Exception as e:
+    logger.warning(f"⚠️ Errore durante il controllo del Drive: {e}. Procedo con cache locale.")
 
 def clean_output(text):
     """
