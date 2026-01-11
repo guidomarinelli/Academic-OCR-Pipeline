@@ -1,0 +1,14 @@
+# Core AI Frameworks
+torch
+torchvision
+transformers>=4.45.0
+accelerate
+bitsandbytes>=0.43.0
+
+# Document Processing
+olmocr>=0.4.0
+pypdf
+Pillow
+
+# Utilities
+tqdm
