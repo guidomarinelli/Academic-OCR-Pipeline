@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 2. **Esecuzione della Pipeline**:
 ```bash
-python olmocr_pipeline.py --input_dir ./documenti --workspace ./output
+python olmocr_pipeline.py --pdfs ./documenti --workspace ./output
 
 ```
 
