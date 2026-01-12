@@ -1,6 +1,6 @@
 # Academic-OCR-Pipeline 🎓📈
 
-Una pipeline automatizzata per convertire PDF accademici (appunti, dispense, libri di Analisi Matematica) in file Markdown perfettamente ottimizzati per **Obsidian**. Il progetto sfrutta la potenza di **olmOCR** per il riconoscimento del testo e la conversione intelligente delle formule matematiche.
+Una pipeline automatizzata per convertire PDF accademici (appunti, dispense, libri di Analisi Matematica) in file Markdown perfettamente ottimizzati per **Obsidian** o LaTeX (**Overleaf**). Il progetto sfrutta la potenza di **olmOCR** per il riconoscimento del testo e la conversione intelligente delle formule matematiche.
 
 > ### 📝 Note sullo sviluppo
 > 
@@ -9,7 +9,7 @@ Una pipeline automatizzata per convertire PDF accademici (appunti, dispense, lib
 
 ### 🌟 Caratteristiche principali
 
-* **OCR di precisione**: Conversione di documenti complessi tramite `olmOCR` e `Qwen2.5-VL`.
+* **OCR di precisione**: Conversione di documenti complessi tramite `olmOCR`.
 * **LaTeX Smart Handling**: Script dedicati per convertire i delimitatori LaTeX standard `\( \)` e `\[ \]` nei formati `$` e `$$` nativi di Obsidian.
 * **Cloud Ready**: Supporto ottimizzato per Google Colab e Kaggle per sfruttare la potenza delle GPU gratuite.
 * **Flessibilità**: Doppia modalità di formattazione (completa o conservativa per LaTeX).
@@ -78,7 +78,6 @@ python obsidian_formatter.py ./output
 Questo progetto è stato reso possibile grazie all'incredibile lavoro di:
 
 * **The olmOCR Team**: per aver fornito un modello allo stato dell'arte per la comprensione di documenti accademici.
-* **Alibaba Qwen Team**: per il potentissimo modello vision-language Qwen2.5-VL.
 * **Google Colab**: per aver messo a disposizione le risorse computazionali (GPU) necessarie in fase di prototipazione.
 * **Kaggle**: per le risorse GPU fondamentali durante la fase di elaborazione massiva dei dati.
 * **Gemini (Google)**: per l'assistenza alla codifica e al debugging; il supporto dell'AI è stato prezioso, sebbene la **supervisione umana** sia stata indispensabile per correggere errori critici e rendere il codice realmente funzionale.
