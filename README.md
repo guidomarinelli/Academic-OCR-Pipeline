@@ -39,12 +39,12 @@ Il sistema è in grado di convertire appunti manoscritti complessi in documenti 
 ### Esempio 1: Dimostrazione di Analisi (Integrazione)
 | Originale (Scansione) | Output Obsidian (Rendering) |
 | :--- | :--- |
-| <img src="./assets/1A.jpg" width="400"> | <img src="./assets/1B.png" width="400"> |
+| <img src="./assets/1A.png" width="400"> | <img src="./assets/1B.png" width="400"> |
 
 ### Esempio 2: Teorema della Funzione Composta
 | Originale (Scansione) | Output Obsidian (Rendering) |
 | :--- | :--- |
-| <img src="./assets/2A.jpg" width="400"> | <img src="./assets/2B.png" width="400"> |
+| <img src="./assets/2A.png" width="400"> | <img src="./assets/2B.png" width="400"> |
 
 ---
 
